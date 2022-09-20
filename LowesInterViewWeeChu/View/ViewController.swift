@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         movieTableView.dataSource = self
         movieTableView.delegate = self
         searchTextField.delegate = self
@@ -104,4 +103,5 @@ extension ViewController: UITextFieldDelegate {
         return true
     }
 }
+
 
