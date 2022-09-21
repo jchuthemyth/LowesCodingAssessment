@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         performSearch()
     }
     
+    // MARK: Perform search function - with text entered in search text field
     func performSearch() {
         DispatchQueue.main.async {
             self.spinner.startAnimating()
@@ -97,6 +98,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension ViewController: UITextFieldDelegate {
     
+    // MARK: Keyboard return button connect to search function
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         performSearch()

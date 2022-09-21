@@ -12,6 +12,7 @@ class ApiManager {
     
     private let API_KEY = "5885c445eab51c7004916b9c0313e2d3"
     
+    //MARK: create URL
     func createURL(searchTerm: String) -> URL? {
         var components = URLComponents()
         components.scheme = "https"
@@ -25,10 +26,10 @@ class ApiManager {
         guard let url = components.url else {
             return nil
         }
-        print(url)
         return url
     }
     
+    // MARK: API method
     func getMovieData(searchTerm: String, completion: @escaping (MovieData?, Error?) -> Void) {
         
         guard let url = createURL(searchTerm: searchTerm) else {
@@ -60,6 +61,7 @@ class ApiManager {
     
 }
 
+// MARK: Error Handling
 enum NetworkError: Error {
     case invalidURL
     case dataNotAvailable

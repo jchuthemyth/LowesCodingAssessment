@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: A protocol to make date format conversion easier
 protocol FormatDateProtocol {
     func formatDate(fromString: String, dateFormat: String) -> String
 }

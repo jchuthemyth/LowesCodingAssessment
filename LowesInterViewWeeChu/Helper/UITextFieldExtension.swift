@@ -10,6 +10,7 @@ import UIKit
 
 extension UITextField {
     
+    //MARK: set left icon in the search bar
     func setLeftIcon(imageName: String) {
         
         let size = 15

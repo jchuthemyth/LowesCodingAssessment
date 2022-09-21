@@ -21,6 +21,7 @@ class ViewControllerViewModel: FormatDateProtocol {
         self.apiManager = apiManager
     }
     
+    // MARK: Fetching data from api
     func fetchMovieData(searchTerm: String) {
         
         apiManager.getMovieData(searchTerm: searchTerm) { [weak self] movieData, error in
@@ -35,6 +36,7 @@ class ViewControllerViewModel: FormatDateProtocol {
         
     }
     
+    // MARK: Processing data that return from api call
     func processMovieData(_ movies: [Movie]) {
         var cells = [Movie]()
         

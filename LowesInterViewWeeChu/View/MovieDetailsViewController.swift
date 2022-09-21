@@ -11,8 +11,8 @@ class MovieDetailsViewController: UIViewController {
     
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
-    @IBOutlet weak var movieDescription: UILabel!
     @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieDescription: UITextView!
     
     let imageManager = ImageManager()
     
